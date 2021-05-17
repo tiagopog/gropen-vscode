@@ -4,22 +4,27 @@ import { gropen } from './gropen';
 
 // Method is called when the extension is activated
 export function activate(context: vscode.ExtensionContext) {
-  console.log('Congratulations, your extension "gropen-vscode" is now active!');
-
-  const success_message = 'Opening file on remote repo...';
+  const successMessage = 'Opening file on remote repo...';
 
   let gropen_file = vscode.commands.registerCommand('gropen-vscode.gropen_file', () => {
-    gropen("foo", 1, 2)
-    vscode.window.showInformationMessage(success_message);
+    let filePath = vscode.window.activeTextEditor?.document.fileName;
+    if (!filePath) return;
+
+    let {success, errorMessage} = gropen(filePath);
+
+    if (success) {
+      vscode.window.showInformationMessage(successMessage);
+    } else {
+      vscode.window.showErrorMessage(errorMessage);
+    }
   });
 
-  let gropen_current_line = vscode.commands.registerCommand('gropen-vscode.gropen_current_line', () => {
-    gropen("foo", 1, 2)
-    vscode.window.showInformationMessage(success_message);
+  let gropenCurrentLine = vscode.commands.registerCommand('gropen-vscode.gropen_current_line', () => {
+    // TODO
   });
 
   context.subscriptions.push(gropen_file);
-  context.subscriptions.push(gropen_current_line);
+  context.subscriptions.push(gropenCurrentLine);
 }
 
 // Method is called when the extension is deactivated

@@ -14,9 +14,15 @@ async function shell(command: string) {
   });
 }
 
-export async function gropen(file_path: string, start_line: number, end_line: number) {
-  console.log(file_path);
-  console.log(start_line);
-  console.log(end_line);
-  shell("gropen .");
+export function gropen(filePath: string, startLine?: number, endLine?: number): {success: boolean, errorMessage?: any} {
+  let paths = filePath.split('/');
+  let fileName = paths.pop();
+  let directoryPath = paths.join('/');
+
+  if (!directoryPath || !fileName) {
+    return {success: false, errorMessage: 'Unknown directory or file name'};
+  }
+
+  shell(`cd ${directoryPath} && gropen ${fileName}`)
+  return {success: true};
 }
