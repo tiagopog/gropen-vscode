@@ -11,7 +11,8 @@
   ],
   "activationEvents": [
     "onCommand:gropen-vscode.gropen_file",
-    "onCommand:gropen-vscode.gropen_current_line"
+    "onCommand:gropen-vscode.gropen_current_line",
+    "onCommand:gropen-vscode.gropen_line_range"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -23,6 +24,10 @@
       {
         "command": "gropen-vscode.gropen_current_line",
         "title": "Gropen Current Line"
+      },
+      {
+        "command": "gropen-vscode.gropen_line_range",
+        "title": "Gropen Line Range"
       }
     ]
   },
