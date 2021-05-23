@@ -8,7 +8,7 @@ async function shell(command: string) {
         reject(error);
       } else {
         console.log(stdout);
-        resolve({ stdout, stderr });
+        resolve({stdout, stderr});
       }
     });
   });
@@ -23,6 +23,11 @@ export function gropen(filePath: string, startLine?: number, endLine?: number): 
     return {success: false, errorMessage: 'Unknown directory or file name'};
   }
 
-  shell(`cd ${directoryPath} && gropen ${fileName}`)
+  let command = `cd ${directoryPath} && gropen ${fileName}`;
+
+  if (startLine) command += `:${startLine}`;
+  if (endLine) command += `,${endLine}`;
+
+  shell(command);
   return {success: true};
 }

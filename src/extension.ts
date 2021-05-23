@@ -4,9 +4,9 @@ import { gropen } from './gropen';
 
 // Method is called when the extension is activated
 export function activate(context: vscode.ExtensionContext) {
-  const successMessage = 'Opening file on remote repo...';
+  let successMessage = 'Opening file on remote repo...';
 
-  let gropen_file = vscode.commands.registerCommand('gropen-vscode.gropen_file', () => {
+  let gropenFile = vscode.commands.registerCommand('gropen-vscode.gropen_file', () => {
     let filePath = vscode.window.activeTextEditor?.document.fileName;
     if (!filePath) return;
 
@@ -20,10 +20,24 @@ export function activate(context: vscode.ExtensionContext) {
   });
 
   let gropenCurrentLine = vscode.commands.registerCommand('gropen-vscode.gropen_current_line', () => {
-    // TODO
+    let filePath = vscode.window.activeTextEditor?.document.fileName;
+    let activeEditor = vscode.window.activeTextEditor;
+
+    if (!filePath || !activeEditor) return;
+
+    let currentLine: number = activeEditor.selection.active.line;
+    currentLine = currentLine + 1;
+
+    let {success, errorMessage} = gropen(filePath,  currentLine)
+
+    if (success) {
+      vscode.window.showInformationMessage(successMessage);
+    } else {
+      vscode.window.showErrorMessage(errorMessage);
+    }
   });
 
-  context.subscriptions.push(gropen_file);
+  context.subscriptions.push(gropenFile);
   context.subscriptions.push(gropenCurrentLine);
 }
 
