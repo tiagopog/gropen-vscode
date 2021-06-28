@@ -1,4 +1,4 @@
-import { exec } from 'child_process';
+import { exec } from "child_process";
 
 // Wrapper function for running shell commands.
 async function shell(command: string) {
@@ -9,20 +9,24 @@ async function shell(command: string) {
         reject(error);
       } else {
         console.log(stdout);
-        resolve({stdout, stderr});
+        resolve({ stdout, stderr });
       }
     });
   });
 }
 
 // Wrapper function for the gropen CLI.
-export function gropen(filePath: string, startLine?: number, endLine?: number): {success: boolean, errorMessage?: any} {
-  let paths = filePath.split('/');
+export function gropen(
+  filePath: string,
+  startLine?: number,
+  endLine?: number
+): { success: boolean; errorMessage?: any } {
+  let paths = filePath.split("/");
   let fileName = paths.pop();
-  let directoryPath = paths.join('/');
+  let directoryPath = paths.join("/");
 
   if (!directoryPath || !fileName) {
-    return {success: false, errorMessage: 'Unknown directory or file name'};
+    return { success: false, errorMessage: "Unknown directory or file name" };
   }
 
   let command = `cd ${directoryPath} && gropen ${fileName}`;
@@ -31,5 +35,5 @@ export function gropen(filePath: string, startLine?: number, endLine?: number): 
   if (endLine) command += `,${endLine}`;
 
   shell(command);
-  return {success: true};
+  return { success: true };
 }
