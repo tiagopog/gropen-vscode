@@ -4,7 +4,7 @@ A Vs Code extension for quickly opening local files and directories on remote gi
 
 This plugin was thought out to make it a breeze to share code from a codebase with your coworkers.
 
-![gropen usage example](usage.gif)
+![gropen usage example](https://github.com/tiagopog/gropen-vscode/blob/a5b7f0c3c293ba9990f35d3062fb835619a0d1ba/usage.gif?raw=true)
 
 ## Features
 
