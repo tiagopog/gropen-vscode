@@ -29,6 +29,23 @@
         "command": "gropen-vscode.gropen_line_range",
         "title": "Gropen Line Range"
       }
+    ],
+    "keybindings": [
+      {
+        "command": "gropen-vscode.gropen_file",
+        "key": "ctrl+alt+g",
+        "mac": "alt+cmd+g"
+      },
+      {
+        "command": "gropen-vscode.gropen_current_line",
+        "key": "ctrl+alt+l",
+        "mac": "alt+cmd+l"
+      },
+      {
+        "command": "gropen-vscode.gropen_line_range",
+        "key": "ctrl+alt+r",
+        "mac": "alt+cmd+r"
+      }
     ]
   },
   "scripts": {
