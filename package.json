@@ -2,7 +2,7 @@
   "name": "gropen-vscode",
   "displayName": "gropen.vscode",
   "description": "Plugin for quickly opening local files and directories on remote git repositories.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.56.0"
   },
