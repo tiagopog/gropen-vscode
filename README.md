@@ -1,4 +1,4 @@
-# gropen-vscode README
+# gropen.vscode
 
 A Vs Code extension for quickly opening local files and directories on remote git repositories.
 
