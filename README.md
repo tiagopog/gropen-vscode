@@ -18,7 +18,7 @@ This plugin was thought out to make it a breeze to share code from a codebase wi
 
 1. Python >= 3.6
 2. Git
-3. gropen (`pip install gropen`)
+3. [gropen](https://github.com/tiagopog/gropen) (`pip install gropen`)
 
 ## Release Notes
 
