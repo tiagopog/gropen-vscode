@@ -10,9 +10,9 @@ This plugin was thought out to make it a breeze to share git-versioned code with
 
 | Feature                          | Keybindings (windows / mac) | Command Palette       |
 | -------------------------------- |:---------------------------:| :--------------------:|
-| Open current file on remote repo | ctrl+alt+g / alt+cmd+g      | > Gropen File         |
-| Open current line on remote repo | ctrl+alt+l / alt+cmd+l      | > Gropen Current Line |
-| Open line range on remote repo   | ctrl+alt+r / alt+cmd+r      | > Gropen Line Range   |
+| Open current file in remote repo | ctrl+alt+g / alt+cmd+g      | > Gropen File         |
+| Open current line in remote repo | ctrl+alt+l / alt+cmd+l      | > Gropen Current Line |
+| Open line range in remote repo   | ctrl+alt+r / alt+cmd+r      | > Gropen Line Range   |
 
 ## Requirements
 
