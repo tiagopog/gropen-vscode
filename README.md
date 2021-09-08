@@ -1,6 +1,6 @@
 # gropen.vscode
 
-A Vs Code extension for quickly opening local files and directories on remote git repositories.
+A Vs Code extension for quickly opening local files and directories in remote git repositories.
 
 This plugin was thought out to make it a breeze to share git-versioned code with your coworkers.
 
