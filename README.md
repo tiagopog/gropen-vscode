@@ -1,6 +1,6 @@
 # gropen.vscode
 
-A Vs Code extension for quickly opening local files and directories in remote git repositories.
+A VS Code extension for quickly opening local files and directories in remote git repositories.
 
 This plugin was thought out to make it a breeze to share git-versioned code with your coworkers.
 
@@ -8,11 +8,23 @@ This plugin was thought out to make it a breeze to share git-versioned code with
 
 ## Features
 
-| Feature                          | Keybindings (windows / mac) | Command Palette       |
-| -------------------------------- |:---------------------------:| :--------------------:|
-| Open current file in remote repo | ctrl+alt+g / alt+cmd+g      | > Gropen File         |
-| Open current line in remote repo | ctrl+alt+l / alt+cmd+l      | > Gropen Current Line |
-| Open line range in remote repo   | ctrl+alt+r / alt+cmd+r      | > Gropen Line Range   |
+### Opening Code in Remote Repos
+
+Right click on the file in the explorer then choose to view file in remote repo:
+
+![Gropen explorer example](./src/assets/example_right_click_explorer.png)
+
+Right click on the file in the editor then choose to view file, line or selected lines in remote repo:
+
+![Gropen editor example](./src/assets/example_right_click_in_editor.png)
+
+### Keybindings
+
+| Feature                        | Keybindings (windows / mac) | Command Palette       |
+| -------------------------------|:---------------------------:| :--------------------:|
+| Open file in remote repo       | ctrl+alt+g / alt+cmd+g      | > Gropen File         |
+| Open line in remote repo       | ctrl+alt+l / alt+cmd+l      | > Gropen Current Line |
+| Open line range in remote repo | ctrl+alt+r / alt+cmd+r      | > Gropen Line Range   |
 
 ## Requirements
 

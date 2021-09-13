@@ -22,15 +22,15 @@
     "commands": [
       {
         "command": "gropen-vscode.gropen_file",
-        "title": "Gropen File"
+        "title": "View File in Remote Repo"
       },
       {
         "command": "gropen-vscode.gropen_current_line",
-        "title": "Gropen Current Line"
+        "title": "View Current Line in Remote Repo"
       },
       {
         "command": "gropen-vscode.gropen_line_range",
-        "title": "Gropen Line Range"
+        "title": "View Line(s) in Remote Repo"
       }
     ],
     "keybindings": [
@@ -49,7 +49,25 @@
         "key": "ctrl+alt+r",
         "mac": "alt+cmd+r"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "gropen-vscode.gropen_file",
+          "group": "gropen-vscode"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "gropen-vscode.gropen_file",
+          "group": "gropen-vscode"
+        },
+        {
+          "command": "gropen-vscode.gropen_line_range",
+          "group": "gropen-vscode"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

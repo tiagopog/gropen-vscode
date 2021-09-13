@@ -4,7 +4,7 @@ import { gropen } from "./gropen";
 
 // Method called when the extension is activated
 export function activate(context: vscode.ExtensionContext) {
-  // 1) Open file on remote repo:
+  // 1) Open file in remote repo:
   let gropenFile = vscode.commands.registerCommand(
     "gropen-vscode.gropen_file",
     () => {
@@ -14,7 +14,7 @@ export function activate(context: vscode.ExtensionContext) {
     }
   );
 
-  // 2) Open current line on remote repo:
+  // 2) Open current line in remote repo:
   let gropenCurrentLine = vscode.commands.registerCommand(
     "gropen-vscode.gropen_current_line",
     () => {
@@ -28,7 +28,7 @@ export function activate(context: vscode.ExtensionContext) {
     }
   );
 
-  // 3) Open line range on remote repo:
+  // 3) Open line range in remote repo:
   let gropenLineRange = vscode.commands.registerCommand(
     "gropen-vscode.gropen_line_range",
     () => {
