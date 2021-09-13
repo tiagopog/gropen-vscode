@@ -4,7 +4,7 @@
   "description": "Plugin for quickly opening local files and directories in remote git repositories.",
   "icon": "images/gropen.jpeg",
   "publisher": "tiagopog",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "repository": "https://github.com/tiagopog/gropen-vscode",
   "engines": {
     "vscode": "^1.56.0"
