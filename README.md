@@ -34,6 +34,11 @@ Right click on the file in the editor then choose to view file, line or selected
 
 ## Release Notes
 
+### 0.2.0
+
+Add support for opening files in remote repos by right clicking on files in the explorer
+or in the editor context.
+
 ### 0.1.0
 
 Initial release of `gropen-vscode`.
